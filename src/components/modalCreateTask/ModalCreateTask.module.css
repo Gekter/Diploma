@@ -1,0 +1,23 @@
+.form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: fit-content;
+}
+
+.form input {
+  padding: 8px;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form input[type="submit"] {
+  cursor: pointer;
+}
+.title {
+  font-size: 32px;
+  color: var(--gray-500);
+}

@@ -1,0 +1,12 @@
+.title {
+  font-size: 32px;
+  /* margin-bottom: 20px; */
+  color: var(--gray-500);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 52px;
+}

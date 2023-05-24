@@ -1,0 +1,38 @@
+.SideMenu {
+  height: 100%;
+  padding: 24px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--gray-100);
+  width: 320px;
+  transition: width 0.2s ease;
+}
+.SideMenuCollapsed {
+  width: 37px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.SideMenuContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  font-size: 32px;
+  color: var(--gray-500);
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.collapseBtn {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}

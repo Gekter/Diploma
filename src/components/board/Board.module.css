@@ -1,0 +1,54 @@
+.Board {
+  max-height: 100%;
+  /* max-width: 100%; */
+  display: flex;
+
+  gap: 36px;
+
+  margin-top: 32px;
+}
+
+.Column {
+  /* padding-bottom: 64px; */
+  /* width: 320px; */
+  min-width: 320px;
+  /* width: 100%; */
+  margin: 0px 10px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ColumnTitle {
+  margin-bottom: 4px;
+  color: var(--gray-500);
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.columnContent {
+  /* min-height: 100%; */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  margin-bottom: 80px;
+  margin-top: 16px;
+}
+
+.Devider {
+  height: 100%;
+  width: 0px;
+  border-right: 1px solid var(--gray-500);
+}
+
+.horiz {
+  background-color: blue;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  height: 10px !important;
+}

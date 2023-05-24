@@ -1,0 +1,130 @@
+.ModalContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  gap: 24px;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.ModalContent > main {
+  width: 800px;
+}
+
+.preloaderWrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TASK INFO STYLES */
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--gray-500);
+}
+
+.priority,
+.status {
+  font-size: 14px;
+  font-weight: bold;
+}
+.commentsTitle {
+  display: flex;
+  align-items: center;
+}
+
+.ModalTableWrapper {
+  background: var(--gray-25);
+  border: 1px solid var(--gray-400);
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.commentItem {
+  display: flex;
+  gap: 10px;
+}
+
+.commentMain {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.commentDate {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.commentAuthor {
+  font-weight: bold;
+}
+
+.descriptionWrapper {
+  margin-top: 15px;
+  white-space: pre-line;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.commentItemsWrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  white-space: pre-line;
+}
+
+.addComment {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addComment > h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.addComment > textarea {
+  resize: none;
+  width: 80%;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.addComment > button {
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 
+ALEK UZHAS
+.addComment > button:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+} */
+
+.files {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

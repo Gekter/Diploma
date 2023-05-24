@@ -1,0 +1,18 @@
+.ModalTable tr {
+  transition: background-color 0.3s ease;
+}
+
+.ModalTable tr:hover {
+  background: var(--gray-200);
+}
+
+.ModalTable td {
+  padding: 10px;
+}
+
+.ModalTableUser {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: space-between;
+}

@@ -1,0 +1,12 @@
+.cardsWrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  padding-bottom: 24px;
+}
+
+.cardProjectWrapper {
+  width: 20%;
+  min-width: 220px;
+}

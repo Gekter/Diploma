@@ -1,0 +1,533 @@
+{
+	"info": {
+		"_postman_id": "f7277493-5453-4442-bebe-4b102667e027",
+		"name": "1_BITRIX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18524433"
+	},
+	"item": [
+		{
+			"name": "To Bitrix",
+			"item": [
+				{
+					"name": "get task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/tasks.task.get?taskId=38807",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"tasks.task.get"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "38807"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/sonet_group.get.json",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"sonet_group.get.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tasks by project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/tasks.task.list?filter%5BGROUP_ID%5D=427",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"tasks.task.list"
+							],
+							"query": [
+								{
+									"key": "filter%5BGROUP_ID%5D",
+									"value": "427"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add task to project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n        \"GROUP_ID\": 427,\r\n        \"TITLE\": \"vvv ONTASKADD 2\",\r\n        \"RESPONSIBLE_ID\": 611\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/tasks.task.add",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"tasks.task.add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"taskId\": 38807,\r\n    \"fields\": {\r\n        \"DESCRIPTION\": \"vvv ONTASKADD UPDATE 22\",\r\n        \"RESPONSIBLE_ID\": 635,\r\n        \"STATUS\": \"!23123\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/tasks.task.update",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"tasks.task.update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/tasks.task.delete?taskId=38881",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"tasks.task.delete"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "38881"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/task.commentitem.getlist?TASKID=38807",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"task.commentitem.getlist"
+							],
+							"query": [
+								{
+									"key": "TASKID",
+									"value": "38807"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TASKID\": 38807,\r\n    \"FIELDS\": {\r\n        \"POST_MESSAGE\": \"ADD COMMENT\",\r\n        \"UF_FORUM_MESSAGE_DOC\": []\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/task.commentitem.add",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"task.commentitem.add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TASKID\": 38881,\r\n    \"ITEMID\": 257585,\r\n    \"FIELDS\": {\r\n        \"POST_MESSAGE\": \"UPDATE COMMENT\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/task.commentitem.update",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"task.commentitem.update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TASKID\": 38881,\r\n    \"ITEMID\": 257585\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/task.commentitem.delete",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"task.commentitem.delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users by ids",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filter\": {\r\n        \"ID\": [1, \"635\", 1]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/user.get",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user.get"
+							],
+							"query": [
+								{
+									"key": "filter%5BID%5D",
+									"value": "%5B635,1%5D",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "To Local Api",
+			"item": [
+				{
+					"name": "get projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain_local}}/kanban/projects",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain_local}}/kanban/task/38807",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"task",
+								"38807"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tasks by project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain_local}}/kanban/projects/427",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"projects",
+								"427"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain_local}}/kanban/task/38807/comments",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"task",
+								"38807",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add task to project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n        \"GROUP_ID\": 427,\r\n        \"TITLE\": \"vvv ONTASKADD 3\",\r\n        \"RESPONSIBLE_ID\": 611\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain_local}}/kanban/task",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n        \"DESCRIPTION\": \"vvv ONTASKADD UPDATE 3\",\r\n        \"STATUS\": \"Ждёт выполнения\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain_local}}/kanban/task/38807",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"task",
+								"38807"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{domain_local}}/kanban/task/38883",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"task",
+								"38883"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"POST_MESSAGE\": \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain_local}}/kanban/task/38881/comment",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"task",
+								"38881",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"POST_MESSAGE\": \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain_local}}/kanban/task/38881/comment/257585",
+							"host": [
+								"{{domain_local}}"
+							],
+							"path": [
+								"kanban",
+								"task",
+								"38881",
+								"comment",
+								"257585"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "https://truecode.bitrix24.ru/rest/635/64ag306pv8a2fdff",
+			"type": "string"
+		},
+		{
+			"key": "domain_local",
+			"value": "http://localhost:3010/api",
+			"type": "string"
+		}
+	]
+}

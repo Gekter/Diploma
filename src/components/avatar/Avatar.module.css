@@ -1,0 +1,5 @@
+.user {
+  background-color: var(--gray-500);
+
+  border-radius: 50%;
+}
